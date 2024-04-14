@@ -1,0 +1,13 @@
+skp_olist_data_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: trans-array-412413
+      dataset: olist
+      location: US
+      threads: 4
+      keyfile: /home/src/gcp.json
+      timeout_seconds: 300
+  
