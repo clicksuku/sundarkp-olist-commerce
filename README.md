@@ -14,7 +14,7 @@ Brazil Olist Customers, Sellers and Marketing Data
 >
 > <https://www.kaggle.com/datasets/olistbr/marketing-funnel-olist>
 
-## <img src="Visualizations/OlistDataStructures.jpg" style="width:6.21574in;height:3.74074in"
+## <img src="https://github.com/clicksuku/sundarkp-olist-commerce/blob/initBranch/Visualizations/OlistDataStructures.jpg" style="width:6.21574in;height:3.74074in"
 alt="Data Schema" />
 
 # Run with Docker Mage + BQ & GCS Bucket 
