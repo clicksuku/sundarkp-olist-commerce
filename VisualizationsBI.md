@@ -2,8 +2,7 @@
 
 **<u>Total Orders X Total Customers View</u>**
 
-SELECT
-
+> SELECT
 > \`olist.CustomerLifeTimeOrderCount_View\`.\`TotalOrders\` AS
 > \`TotalOrders\`,
 >
@@ -14,7 +13,7 @@ SELECT
 >
 > \`olist.CustomerLifeTimeOrderCount_View\`
 
-<img src="media/image1.png" style="width:6.26806in;height:2.56111in"
+<img src="https://github.com/clicksuku/sundarkp-olist-commerce/blob/main/Visualizations/Customer%20Lifetime%20OrderCount.png" style="width:6.26806in;height:2.56111in"
 alt="A graph with a line Description automatically generated with medium confidence" />
 
 **<u>Orders Count grouped by Purchase Dates</u>**
@@ -43,7 +42,7 @@ alt="A graph with a line Description automatically generated with medium confide
 >
 > \`orderPurchasedDate\` ASC
 
-<img src="media/image2.png" style="width:6.86157in;height:2.49802in"
+<img src="https://github.com/clicksuku/sundarkp-olist-commerce/blob/main/Visualizations/Orders%20Count%20grouped%20by%20Purchase%20Dates.png" style="width:6.86157in;height:2.49802in"
 alt="A graph showing a line Description automatically generated with medium confidence" />
 
 **Customer LTV Ranges**
@@ -61,10 +60,10 @@ alt="A graph showing a line Description automatically generated with medium conf
 >
 > from \`olist.CustomersTotalPaymentsValue\` ctv;
 
-<img src="media/image3.png" style="width:6.26806in;height:1.1375in"
+<img src="https://github.com/clicksuku/sundarkp-olist-commerce/blob/main/Visualizations/Customer%20LifeTime%20Value%20Ranges.png" style="width:6.26806in;height:1.1375in"
 alt="A screenshot of a cellphone Description automatically generated" />
 
 **OList Store Distribution**
 
-<img src="media/image4.png" style="width:6.26806in;height:4.05208in"
+<img src="https://github.com/clicksuku/sundarkp-olist-commerce/blob/main/Visualizations/Olist.jpg" style="width:6.26806in;height:4.05208in"
 alt="A screenshot of a map Description automatically generated" />
