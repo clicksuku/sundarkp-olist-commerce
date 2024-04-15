@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "google" {
-  project     = "trans-array-412413"
+  project     = var.projectId
   credentials = file("${var.gcpkey}")
   #region      = var.region
   zone = var.zone

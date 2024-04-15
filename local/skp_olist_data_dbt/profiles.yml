@@ -4,10 +4,10 @@ skp_olist_data_dbt:
     dev:
       type: bigquery
       method: service-account
-      project: trans-array-412413
+      project: <Project_ID>
       dataset: olist
       location: US
       threads: 4
-      keyfile: /home/src/gcp.json
+      keyfile: <Path to GCP Project Service Account JSON>
       timeout_seconds: 300
   
