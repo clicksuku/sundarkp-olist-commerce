@@ -146,17 +146,27 @@ alt="A group of logos on a white background Description automatically generated"
 
   - CD to *skpmagepipeline/dbt*
 
-  - Copy the skp_olist_data_dbt from the git clone folder to skpmagepipeline/dbt
+  - Copy the skp_olist_data_dbt from the *<Git Cloned Folder>(sundarkp-olist-commerce)/local/skp_olist_data_dbt* to *skpmagepipeline/dbt*
 
   - Update the Profile for the DBT Project at skpmagepipeline/dbt/skp_olist_data_dbt/profiles.yml
 
       - Update the field Project to the ** Project ID ** you have configured
 
       - Update the ** Path of Service Account JSON** in the keyfile field of Profiles.yml
+        
+      - Update the ** Project ID ** and ** Schema ID/Table Name ** to the fields local/skp_olist_data_dbt/models/core/schema.yml
+        
+      - Update the ** Project ID ** and ** Schema ID/Table Name ** to the fields local/skp_olist_data_dbt/models/staging/schema.yml
 
   - Run each step in the pipeline 
 
-  - The steps as explained about, pulls data from Kaggle, ingests into bucket. Creates Tables and views in Dataset. DBT Models are run to generate new tables.  
+  - The steps as explained about, pulls data from Kaggle, ingests into bucket. Creates Tables and views in Dataset. DBT Models are run to generate new tables.
+
+# DBT Docs
+
+[DBT Documentation[def]
+BI](https://cloud.getdbt.com/accounts/248250/develop/6361434/docs/index.html#!/overview)
+
 
 # Visualizations and Analysis
 
