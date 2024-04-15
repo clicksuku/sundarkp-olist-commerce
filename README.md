@@ -68,87 +68,79 @@ alt="A group of logos on a white background Description automatically generated"
 
 # Run with Docker Mage + BQ & GCS Bucket 
 
-## Perquisites
+  ## Perquisites
 
-- Google Project
+    1.	A Google Project with free tier – 
+    2.	Following API and Services needs to be enabled on the Google Project
+        1. BigQuery API
+        2. BigQuery Storage API
+        3. Identity and Access Management (IAM) API
+        4. Compute Engine API
+    3.	Service Account
+        1.	Goto IAM & Admin. Configure the following Permissions required
+          i.	Owner
+          ii.	BigQuery Admin
+          iii.	BigQuery Read Session User
+          iv.	Storage Admin
+          v.	Storage Folder Admin
+          vi.	Storage Object Admin
+          vii.	Compute Storage Admin
+    4.  Terraform
+        1. In GCP Cloud Storage, bucket has to be created
+        2. In BigQuery, Dataset has to be created (olist)
+        3. Run the following terraform commands. Please provide the proper project name in variables.tf
+          1. terraform init
+          2. terraform fmt
+          3. terraform validate
+          4. terraform plan  -var gcpkey=<Path to ServiceAccount.JSON>
+          5. terraform apply  -var gcpkey=<Path to ServiceAccount.JSON>
 
-  - API and Services enabled
+  ## Clean Up
 
-- Service Account
-
-  - Goto IAM & Admin. Configure the following Permissions required
-
-    - BigQuery Admin
-
-    - BigQuery Read Session User
-
-    - Compute Storage Admin
-
-    - Owner
-
-    - Storage Admin
-
-    - Storage Folder Admin
-
-    - Storage Object Admin
-
-- Terraform
-
-  - In GCP Cloud Storage, bucket has to be created
-
-  - In BigQuery, Dataset has to be created (olist)
-
-  - Run the following terraform commands. Please provide the proper project name in variables.tf
-    - terraform init
-    - terraform fmt
-    - terraform validate
-    - terraform plan  -var gcpkey=<Path to ServiceAccount.JSON>
-    - terraform apply  -var gcpkey=<Path to ServiceAccount.JSON>
-    - terraform destroy  -var gcpkey=<Path to ServiceAccount.JSON>
+    1. Destroy the resources created through terraform 
+      1. terraform destroy  -var gcpkey=<Path to ServiceAccount.JSON>
 
 
-## Preparing the ground
+# Steps to reproduct locally
 
-- Git Clone the Repository from
-  <https://github.com/clicksuku/sundarkp-olist-commerce.git>
+  - Git Clone the Repository from
+      <https://github.com/clicksuku/sundarkp-olist-commerce.git>
 
-- Build the MAGE_SPARK Image from the DockerFile
+  - Build the MAGE_SPARK Image from the DockerFile
 
-  - Docker build -t mage_spark .
+    - Goto the folder in which the 'Dockerfile' is present
+    - Docker build -t mage_spark .
 
-## Running it locally
+  - Create a folder, say SundarkpOlist, where the mage pipeline is going to reside and run
 
-- Create a folder where the mage data is going to reside
+  - Copy the Service Account.JSON [Generate Service Account JSON](https://cloud.google.com/iam/docs/keys-create-delete)
 
-- Go to folder
+  - Copy the Kaggle Account.JSON here [How to Generate Kaggle API JSON](https://www.kaggle.com/docs/api)
+  
+  - Run docker command to initiate mage. In the following, a Mage Project 'skpmagepipeline' is created in the following
 
-  - Copy the Service Account.JSON here
+      > *<span class="mark">docker run -d -t --name skp_mage_spark -e
+      > SPARK_MASTER_HOST='local' -p 6789:6789 -v \$(pwd):/home/src mage_spark
+      > /app/run_app.sh mage start skpmagepipeline</span>*
 
-  - Copy the Kaggle Account.JSON here
+  - Run <http://localhost:6789/>
 
-  - Copy the Custom Mage Pipeline created for the Project
+  - Import the Pipeline as ZIP file from Git Clone folder - skpdezolist.zip
+  
+  - Open Pipeline skpdezolist in Mage Editor Mode
 
-- Run docker command to initiate mage
+  - CD to *skpmagepipeline/dbt*
 
-> *<span class="mark">docker run -d -t --name skp_mage_spark -e
-> SPARK_MASTER_HOST='local' -p 6789:6789 -v \$(pwd):/home/src mage_spark
-> /app/run_app.sh mage start skpmagepipeline</span>*
+  - Copy the skp_olist_data_dbt from the git clone folder to skpmagepipeline/dbt
 
-- CD to *skpmagepipeline/dbt*
+  - Run each step in the pipeline 
 
-- Copy the skp_olist_data_dbt folder to skpmagepipeline/dbt
-
-- Run <http://localhost:6789/>
-
-- Goto Pipeline skpdezolist
-
-  - Run each step in the pipeline
- 
+  - The steps as explained about, pulls data from Kaggle, ingests into bucket. Creates Tables and views in Dataset. DBT Models are run to generate new tables.  
 
 # Visualizations and Analysis
 
-[Link to Visualizations and Analysis
-BI](https://github.com/clicksuku/sundarkp-olist-commerce/blob/main/VisualizationsBI.md)
+    [Link to Visualizations and Analysis
+    BI](https://github.com/clicksuku/sundarkp-olist-commerce/blob/main/VisualizationsBI.md)
 
 # My Learning and Notes
 
