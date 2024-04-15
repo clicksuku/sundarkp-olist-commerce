@@ -146,7 +146,7 @@ alt="A group of logos on a white background Description automatically generated"
 
   - CD to *skpmagepipeline/dbt*
 
-    - Copy the skp_olist_data_dbt from the *<Git Cloned Folder>(sundarkp-olist-commerce)/local/skp_olist_data_dbt* to *skpmagepipeline/dbt*
+  - Copy the skp_olist_data_dbt from the *<Git Cloned Folder>(sundarkp-olist-commerce)/local/skp_olist_data_dbt* to *skpmagepipeline/dbt*
 
   - Update the Profile for the DBT Project at skpmagepipeline/dbt/skp_olist_data_dbt/profiles.yml
 
