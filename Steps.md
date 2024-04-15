@@ -164,18 +164,15 @@ alt="A group of logos on a white background Description automatically generated"
 
 # DBT Docs
 
-[DBT Documentation[def]
-BI](https://cloud.getdbt.com/accounts/248250/develop/6361434/docs/index.html#!/overview)
+    [DBT Documentation](https://cloud.getdbt.com/accounts/248250/develop/6361434/docs/index.html#!/overview)
 
 # Visualizations and Analysis
 
-    [Link to Visualizations and Analysis
-    BI](https://github.com/clicksuku/sundarkp-olist-commerce/blob/main/VisualizationsBI.md)
+    [Link to Visualizations and Analysis](https://github.com/clicksuku/sundarkp-olist-commerce/blob/main/VisualizationsBI.md)
 
 # My Learning and Notes
 
-[Link to My Learning and Notes[def]
-BI](LearningNotes/SundarkpDEZoomCampNotes.pdf)
+    [Link to My Learning and Notes](LearningNotes/SundarkpDEZoomCampNotes.pdf)
 
 
 # References
