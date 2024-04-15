@@ -60,17 +60,17 @@ And the dataset taken is the public dataset of orders made at Olist Stores. The 
   * DBT Packages - CodeGen
   * DBT Packages - DBT Utils
 
-# High Level Design**
+# High Level Design
 
 <img src="Visualizations/OlistHLD.jpg" style="width:6.26806in;height:3.35764in"
 alt="A group of logos on a white background Description automatically generated" />
 
 
-# Run with Docker Mage + BQ & GCS Bucket 
+# Run with Local Docker Mage + GCP BQ & GCS Bucket 
 
   ## Perquisites
 
-    1.	A Google Project with free tier – 
+    1.	A Google Project with free tier. 
     2.	Following API and Services needs to be enabled on the Google Project
         1. BigQuery API
         2. BigQuery Storage API
@@ -217,3 +217,7 @@ Column)**
 # Credits
 
     - Brazilian E-Commerce Company Olist's public Dataset hosted at Kaggle. 
+
+# License
+
+    MIT License
