@@ -1,6 +1,13 @@
+
+variable "projectId" {
+  description = "Project"
+  default     = "<Project ID>"
+}
+
+
 variable "project" {
   description = "Project"
-  default     = "SKPDataEngineering"
+  default     = "<Project Name>"
 }
 
 variable "vmname" {

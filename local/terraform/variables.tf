@@ -1,8 +1,12 @@
 
+variable "projectId" {
+  description = "Project ID"
+  default     = "<Project ID>"
+}
 
 variable "project" {
   description = "Project"
-  default     = "skpdezfinalproject1"
+  default     = "<PROJECT_NAME>"
 }
 
 variable "location" {

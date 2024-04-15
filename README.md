@@ -68,7 +68,7 @@ alt="A group of logos on a white background Description automatically generated"
 
 # Run with Local Docker Mage + GCP BQ & GCS Bucket 
 
-  ## Perquisites
+  ## Pre-requisite Steps
 
     1.	A Google Project with free tier. 
     2.	Following API and Services needs to be enabled on the Google Project
@@ -98,7 +98,13 @@ alt="A group of logos on a white background Description automatically generated"
   ## Clean Up
 
     1. Destroy the resources created through terraform 
-      1. terraform destroy  -var gcpkey=<Path to ServiceAccount.JSON>
+        i. terraform destroy  -var gcpkey=<Path to ServiceAccount.JSON>
+
+  ## Pre-requisite Installs required on the system
+
+    1. Docker.io should be installed and available [Installing Docker](https://docs.docker.com/get-docker/)
+    2. git should be installed and available [Installing Git](https://git-scm.com/downloads)
+    3. terraform should be installed and available [Installing Terraform](https://developer.hashicorp.com/terraform/install)
 
 
 # Steps to reproduct locally
@@ -106,14 +112,18 @@ alt="A group of logos on a white background Description automatically generated"
   - Git Clone the Repository from
       <https://github.com/clicksuku/sundarkp-olist-commerce.git>
 
+  
+  - Goto the cloned folder 
+  
+  
   - Build the MAGE_SPARK Image from the DockerFile
 
     - Goto the folder in which the 'Dockerfile' is present
     - Docker build -t mage_spark .
 
-  - Create a folder, say SundarkpOlist, where the mage pipeline is going to reside and run
+  - Create a folder, say **checkLocally** , where the mage pipeline is going to reside and run
 
-  - Copy the Service Account.JSON [Generate Service Account JSON](https://cloud.google.com/iam/docs/keys-create-delete)
+  - Copy the Service Account.JSON [Generate Service Account JSON](https://cloud.google.com/iam/docs/  keys-create-delete)
 
   - Copy the Kaggle Account.JSON here [How to Generate Kaggle API JSON](https://www.kaggle.com/docs/api)
   
@@ -123,6 +133,11 @@ alt="A group of logos on a white background Description automatically generated"
       > SPARK_MASTER_HOST='local' -p 6789:6789 -v \$(pwd):/home/src mage_spark
       > /app/run_app.sh mage start skpmagepipeline</span>*
 
+  - Once the docker image starts, login to the bash of the Docker. And move/copy the kaggle.json to /root/.kaggle folder
+
+        - docker exec -it skp_mage_spark bash
+        - mv /home/src/kaggle.json /root/.kaggle/
+  
   - Run <http://localhost:6789/>
 
   - Import the Pipeline as ZIP file from Git Clone folder - skpdezolist.zip
@@ -132,6 +147,12 @@ alt="A group of logos on a white background Description automatically generated"
   - CD to *skpmagepipeline/dbt*
 
   - Copy the skp_olist_data_dbt from the git clone folder to skpmagepipeline/dbt
+
+  - Update the Profile for the DBT Project at skpmagepipeline/dbt/skp_olist_data_dbt/profiles.yml
+
+      - Update the field Project to the ** Project ID ** you have configured
+
+      - Update the ** Path of Service Account JSON** in the keyfile field of Profiles.yml
 
   - Run each step in the pipeline 
 
