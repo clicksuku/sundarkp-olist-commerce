@@ -1,17 +1,69 @@
-**High Level Design**
-
-<img src="Visualizations/OlistHLD.jpg" style="width:6.26806in;height:3.35764in"
-alt="A group of logos on a white background Description automatically generated" />
-
-## Datasets Taken
+## About the Dataset
 
 Brazil Olist Customers, Sellers and Marketing Data
+
+Olist is a Brazilian e-commerce platform that connects small and medium-sized businesses to customers. The platform operates as a marketplace, where merchants can list their products and services and customers can browse and purchase them online.
+
+And the dataset taken is the public dataset of orders made at Olist Stores. The dataset has information of 100k orders from 2016 to 2018 made at multiple marketplaces in Brazil. Its features allows viewing an order from multiple dimensions: from order status, price, payment and freight performance to customer location, product attributes and finally reviews written by customers. This is real commercial data, it has been anonymised, and references to the companies and partners in the review text have been replaced with the names of Game of Thrones great houses.
+
 
 > <https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce?resource=download>
 >
 > <https://www.kaggle.com/datasets/olistbr/marketing-funnel-olist>
 
+
 <img src="Visualizations/OlistDataStructures.jpg"/>
+
+
+## Use Cases that can be solved with this dataset are
+
+- Customer Dimension 
+
+  - Customer Life Time Orders Count
+
+  - Customer Life Time Value
+
+  - Date-wise orders of Customers
+
+- Seller Dimension
+
+  - Increase in number of sellers per month
+
+  - Number of new Product categories added per month
+
+  - Categories Purchased at high frequency yearly, monthly
+
+- Stores Dimension
+
+  - Olist Stores Geo Distribution
+
+- Marketing Impact on
+
+  - Addition of new Sellers
+
+  - Addition of new Customers
+
+  - Addition of new Orders
+
+
+# E2E Pipeline Explained
+
+  * Mage as an Orchestrator
+  * Mage DataLoader uses Kaggle API to load the Kaggle Dataset. (Please note Kaggle OAuth Key is required)
+  * The CSVs of data is unzipped into the filesystem
+  * Pandas is used to ingest the CSV data into GCS Buckets through 'Data Exporter'
+  * Data is taken from GCS Bucket and ingested into BigQuery Data Lake through 'Data Exporter'
+  * DBT is leveraged to do transformations and generate new tables & views for the Customers, Sellers dimension
+
+# Additional Tools Used
+
+  * DBT Packages - CodeGen
+  * DBT Packages - DBT Utils
+
+**High Level Design**
+
+<img src="Visualizations/OlistHLD.jpg" style="width:6.26806in;height:3.35764in"
+alt="A group of logos on a white background Description automatically generated" />
 
 
 # Run with Docker Mage + BQ & GCS Bucket 
@@ -46,6 +98,15 @@ Brazil Olist Customers, Sellers and Marketing Data
 
   - In BigQuery, Dataset has to be created (olist)
 
+  - Run the following terraform commands. Please provide the proper project name in variables.tf
+    - terraform init
+    - terraform fmt
+    - terraform validate
+    - terraform plan  -var gcpkey=<Path to ServiceAccount.JSON>
+    - terraform apply  -var gcpkey=<Path to ServiceAccount.JSON>
+    - terraform destroy  -var gcpkey=<Path to ServiceAccount.JSON>
+
+
 ## Preparing the ground
 
 - Git Clone the Repository from
@@ -75,52 +136,25 @@ Brazil Olist Customers, Sellers and Marketing Data
 
 - CD to *skpmagepipeline/dbt*
 
-- Git clone git@github.com:clicksuku/skp_olist_data_dbt.git
+- Copy the skp_olist_data_dbt folder to skpmagepipeline/dbt
 
 - Run <http://localhost:6789/>
 
 - Goto Pipeline skpdezolist
 
   - Run each step in the pipeline
-
-## Use Cases
-
-- Customer Analytics
-
-  - Customer Life Time Orders Count
-
-  - Customer Life Time Value
-
-  - Date-wise orders of Customers
-
-- Store Analytics
-
-  - Olist Stores Geo Distribution
-
-- Seller Analytics
-
-  - Increase in number of sellers per month
-
-  - Number of new Product categories added per month
-
-  - Categories Purchased at high frequency yearly, monthly
-
-- Marketing Impact on
-
-  - Addition of new Sellers
-
-  - Addition of new Customers
-
-  - Addition of new Orders
-
-- Seller vs Customer spread across states
-
-# 
+ 
 
 # Visualizations and Analysis
 
 [Link to Visualizations and Analysis
 BI](https://github.com/clicksuku/sundarkp-olist-commerce/blob/main/VisualizationsBI.md)
+
+# My Learning and Notes
+
+[Link to My Learning and Notes[def]
+BI](LearningNotes/SundarkpDEZoomCampNotes.pdf)
+
 
 # References
 
@@ -187,3 +221,7 @@ Column)**
     - pdf = df.toPandas()
 
     - pdf2 = pdf.reset_index(drop=True)
+
+# Credits
+
+    - Brazilian E-Commerce Company Olist's public Dataset hosted at Kaggle. 
