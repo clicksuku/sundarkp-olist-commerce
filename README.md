@@ -60,7 +60,7 @@ And the dataset taken is the public dataset of orders made at Olist Stores. The 
   * DBT Packages - CodeGen
   * DBT Packages - DBT Utils
 
-**High Level Design**
+# High Level Design**
 
 <img src="Visualizations/OlistHLD.jpg" style="width:6.26806in;height:3.35764in"
 alt="A group of logos on a white background Description automatically generated" />
