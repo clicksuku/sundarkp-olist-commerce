@@ -162,17 +162,17 @@ alt="A group of logos on a white background Description automatically generated"
 
   - The steps as explained about, pulls data from Kaggle, ingests into bucket. Creates Tables and views in Dataset. DBT Models are run to generate new tables.
 
-# DBT Docs
+# DBT Docs #
 
-    [DBT Documentation](https://cloud.getdbt.com/accounts/248250/develop/6361434/docs/index.html#!/overview)
+    [DBT Docs](https://cloud.getdbt.com/accounts/248250/develop/6361434/docs/index.html#!/overview)
 
-# Visualizations and Analysis
+# Visualizations and Analysis #
 
-    [Link to Visualizations and Analysis](https://github.com/clicksuku/sundarkp-olist-commerce/blob/main/VisualizationsBI.md)
+    [Visualization](https://github.com/clicksuku/sundarkp-olist-commerce/blob/main/VisualizationsBI.md)
 
-# My Learning and Notes
+# My Learning and Notes #
 
-    [Link to My Learning and Notes](LearningNotes/SundarkpDEZoomCampNotes.pdf)
+    [Learning Notes](https://github.com/clicksuku/sundarkp-olist-commerce/blob/initBranch/LearningNotes/SundarkpDEZoomCampNotes.pdf)
 
 
 # References
