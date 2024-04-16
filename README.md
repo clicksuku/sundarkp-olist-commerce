@@ -164,16 +164,36 @@ alt="A group of logos on a white background Description automatically generated"
 
 # DBT Docs
 
-    [DBT Documentation](https://cloud.getdbt.com/accounts/248250/develop/6361434/docs/index.html#!/overview)
+    https://cloud.getdbt.com/accounts/248250/develop/6361434/docs/index.html#!/overview
 
 # Visualizations and Analysis
 
-    [Link to Visualizations and Analysis](https://github.com/clicksuku/sundarkp-olist-commerce/blob/main/VisualizationsBI.md)
+    https://github.com/clicksuku/sundarkp-olist-commerce/blob/main/VisualizationsBI.md
 
 # My Learning and Notes
 
-    [Link to My Learning and Notes](LearningNotes/SundarkpDEZoomCampNotes.pdf)
+    https://github.com/clicksuku/sundarkp-olist-commerce/blob/main/LearningNotes/SundarkpDEZoomCampNotes.pdf
 
+
+# Visualizations Screenshots
+
+**Geo Screenshot**
+<img src="Visualizations/Geo.jpg"/>
+
+**Customers Orders Lifetime Count**
+<img src="Visualizations/CustomersLifeTimeOrderCount.jpg"/>
+
+**Customers Orders Lifetime Count**
+<img src="Visualizations/CustomersLifeTimeOrderCount.jpg"/>
+
+**Customers Count against Lifetime Payment Value**
+<img src="Visualizations/CustomersLifeTimePayments.jpg"/>
+
+**Customers count ordering by Purchase Dates**
+<img src="Visualizations/OrdersCountByPurchaseDates.jpg"/>
+
+**Metabase Dashboard - Customer Analytics**
+<img src="Visualizations/MBCustomerTiles.jpg"/>
 
 # References
 
