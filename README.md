@@ -66,7 +66,7 @@ And the dataset taken is the public dataset of orders made at Olist Stores. The 
 alt="A group of logos on a white background Description automatically generated" />
 
 
-# Run with Local Docker Mage + GCP BQ & GCS Bucket 
+# Run against GCP Bucket, BigQuery with Mage Orchestrator run in a docker on the local machine
 
   ## Pre-requisite Steps
 
@@ -107,7 +107,7 @@ alt="A group of logos on a white background Description automatically generated"
     3. terraform should be installed and available [Installing Terraform](https://developer.hashicorp.com/terraform/install)
 
 
-# Steps to reproduct locally
+# Steps to run against GCP Bucket, BigQuery with Mage Orchestrator run in a docker on the local machine
 
   - Git Clone the Repository from
       <https://github.com/clicksuku/sundarkp-olist-commerce.git>
@@ -162,20 +162,19 @@ alt="A group of logos on a white background Description automatically generated"
 
   - The steps as explained about, pulls data from Kaggle, ingests into bucket. Creates Tables and views in Dataset. DBT Models are run to generate new tables.
 
-# DBT Docs
+**DBT Docs**
 
-    https://cloud.getdbt.com/accounts/248250/develop/6361434/docs/index.html#!/overview
+    Basic DBT documentation for the models can be found at [here](https://cloud.getdbt.com/accounts/248250/develop/6391926/docs/index.html#!/overview) 
 
-# Visualizations and Analysis
+**Visualizations and Analysis**
 
-    https://github.com/clicksuku/sundarkp-olist-commerce/blob/main/VisualizationsBI.md
+    Visualization is captured below. And link is [here](https://github.com/clicksuku/sundarkp-olist-commerce/tree/main/Visualizations)
 
-# My Learning and Notes
+**My Learning and Notes**
 
-    https://github.com/clicksuku/sundarkp-olist-commerce/blob/main/LearningNotes/SundarkpDEZoomCampNotes.pdf
+    I have tried to capture my learning through the modules [here](https://github.com/clicksuku/sundarkp-olist-commerce/tree/main/LearningNotes)
 
-
-# Visualizations Screenshots
+**Visualizations Screenshots**
 
 **Olist Store Distribution across Brazil**
 <img src="Visualizations/Geo.jpg"/>
@@ -191,6 +190,13 @@ alt="A group of logos on a white background Description automatically generated"
 
 **Metabase Dashboard - Customer Analytics**
 <img src="Visualizations/MBCustomerTiles.jpg"/>
+
+# Steps to run against GCP Bucket, BigQuery with Mage Orchestrator run in a docker on the GCP machine
+
+ -  With GCP/Terraform, all the GCP resources can be created.
+ -  The Installation script became complex when the loaders, exporters had to be updated to the Mage project created.
+ -  To meet the deadlines, used only GCP Buckets, Bigquery and DBT but ran the orchestrators locally. 
+
 
 # References
 
