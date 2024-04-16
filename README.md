@@ -177,11 +177,8 @@ alt="A group of logos on a white background Description automatically generated"
 
 # Visualizations Screenshots
 
-**Geo Screenshot**
+**Olist Store Distribution across Brazil**
 <img src="Visualizations/Geo.jpg"/>
-
-**Customers Orders Lifetime Count**
-<img src="Visualizations/CustomersLifeTimeOrderCount.jpg"/>
 
 **Customers Orders Lifetime Count**
 <img src="Visualizations/CustomersLifeTimeOrderCount.jpg"/>
