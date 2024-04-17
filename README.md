@@ -168,6 +168,10 @@ alt="A group of logos on a white background Description automatically generated"
         
       - Update the ** Project ID ** and ** Schema ID/Table Name ** to the fields local/skp_olist_data_dbt/models/staging/schema.yml
 
+  - Update the GOOGLE_SERVICE_ACC_KEY_FILEPATH for the DBT Project at skpmagepipeline/io_config.yaml to "/home/src/<Service Account.json>"
+    
+  - Check the <bucket_name> in each step to ensure that it is the bucket created in the terraform step
+  
   - Run each step in the pipeline 
 
   - The steps as explained about, pulls data from Kaggle, ingests into bucket. Creates Tables and views in Dataset. DBT Models are run to generate new tables.
