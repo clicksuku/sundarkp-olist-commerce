@@ -3,7 +3,6 @@ resource "google_bigquery_dataset" "default" {
   friendly_name               = var.dataset_id
   description                 = "This is a Data Engineering Zoomcamp Project by Sundarkp"
   location                    = var.location
-  project                     = var.project
 
   labels = {
     env = "default"
