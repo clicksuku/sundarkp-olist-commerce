@@ -175,6 +175,12 @@ alt="A group of logos on a white background Description automatically generated"
   - Run each step in the pipeline 
 
   - The steps as explained about, pulls data from Kaggle, ingests into bucket. Creates Tables and views in Dataset. DBT Models are run to generate new tables.
+    
+  - Following tables would be created in the BigQuery Schema
+
+              <img src="Visualizations//bqtablescreated.jpg"/>
+
+  - Please refer to VisualizationsBI.md to run queries in Looker Studio or Metabase to create Visualizations. Please refer to the links below for the visualizations created. 
 
 **DBT Docs**
 
