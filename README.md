@@ -145,17 +145,18 @@ alt="A group of logos on a white background Description automatically generated"
   - Once the docker image starts, login to the bash of the Docker. And move/copy the kaggle.json to /root/.kaggle folder
 
         - docker exec -it skp_mage_spark bash
+        - mkdir /root/.kaggle/
         - mv /home/src/kaggle.json /root/.kaggle/
   
-  - Run <http://localhost:6789/>
+  - Open a Web Browser. Run <http://localhost:6789/>
 
-  - Import the Pipeline as ZIP file from Git Clone folder - skpdezolist.zip
+  - Import the Pipeline as ZIP file, under "New Pipeline" from Git Clone folder - <gitclonedfolder>/local/skpdezolist.zip
   
   - Open Pipeline skpdezolist in Mage Editor Mode
 
   - CD to *skpmagepipeline/dbt*
 
-  - Copy the skp_olist_data_dbt from the *<Git Cloned Folder>(sundarkp-olist-commerce)/local/skp_olist_data_dbt* to *skpmagepipeline/dbt*
+  - Copy the skp_olist_data_dbt from the *<Git Cloned Folder>(sundarkp-olist-commerce)/local/* to *skpmagepipeline/dbt*
 
   - Update the Profile for the DBT Project at skpmagepipeline/dbt/skp_olist_data_dbt/profiles.yml
 
