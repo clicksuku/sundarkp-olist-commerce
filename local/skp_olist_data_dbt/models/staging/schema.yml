@@ -2,8 +2,8 @@ version: 2
 
 sources:
   - name: staging
-    database:  trans-array-412413
-    schema: olist
+    database:  <Project ID>
+    schema: <Schema ID>
     
     tables:
       - name: olist_customers_dataset
