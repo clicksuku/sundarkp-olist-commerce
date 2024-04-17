@@ -162,7 +162,7 @@ alt="A group of logos on a white background Description automatically generated"
 
       - Update the field Project to the ** Project ID ** you have configured
 
-      - Update the ** Path of Service Account JSON** in the keyfile field of Profiles.yml
+      - Update the ** Path of Service Account JSON** in the keyfile field of Profiles.yml (Please note that this would be the directory from within the docker. Such as /home/src/<Service Account.json>
         
       - Update the ** Project ID ** and ** Schema ID/Table Name ** to the fields local/skp_olist_data_dbt/models/core/schema.yml
         
