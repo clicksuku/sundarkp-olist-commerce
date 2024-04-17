@@ -112,21 +112,30 @@ alt="A group of logos on a white background Description automatically generated"
   - Git Clone the Repository from
       <https://github.com/clicksuku/sundarkp-olist-commerce.git>
 
-  
-  - Goto the cloned folder 
-  
+  - Goto the <cloned folder>/local 
   
   - Build the MAGE_SPARK Image from the DockerFile
 
     - Goto the folder in which the 'Dockerfile' is present
     - Docker build -t mage_spark .
 
-  - Create a folder, say **checkLocally** , where the mage pipeline is going to reside and run
+  - Create another folder, say **checkLocally** , where the mage pipeline is going to reside and run
 
-  - Copy the Service Account.JSON [Generate Service Account JSON](https://cloud.google.com/iam/docs/  keys-create-delete)
+  - Copy the Service Account.JSON into the newly created **checkLocally** folder [Generate Service Account JSON](https://cloud.google.com/iam/docs/keys-create-delete)
 
-  - Copy the Kaggle Account.JSON here [How to Generate Kaggle API JSON](https://www.kaggle.com/docs/api)
+  - Copy the Kaggle.JSON into the newly created **checkLocally** folder here [How to Generate Kaggle API JSON](https://www.kaggle.com/docs/api)
+
+  - Copy the "terraform" folder from <ClonedFolder>/local to **checkLocally** folder
   
+  - Change the "ProjectID" and "ProjectName" in variables.tf
+
+  - Run the following commands to initialize the GCP buckets and bigquery schema
+      1. terraform init  
+      2. terraform fmt
+      3. terraform validate
+      4. terraform plan  -var gcpkey=<Path to ServiceAccount.JSON>
+      5. terraform apply  -var gcpkey=<Path to ServiceAccount.JSON>  
+
   - Run docker command to initiate mage. In the following, a Mage Project 'skpmagepipeline' is created in the following
 
       > *<span class="mark">docker run -d -t --name skp_mage_spark -e
