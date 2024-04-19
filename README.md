@@ -171,6 +171,8 @@ alt="A group of logos on a white background Description automatically generated"
   - Update the GOOGLE_SERVICE_ACC_KEY_FILEPATH for the DBT Project at skpmagepipeline/io_config.yaml to "/home/src/<Service Account.json>"
     
   - Check the <bucket_name> in each step to ensure that it is the bucket created in the terraform step
+    
+  - In Mage Step 'gcsbuckettobq', update ServiceAccount.JSON file path in service_account.Credentials.from_service_account_file. 
   
   - Run each step in the pipeline 
 
