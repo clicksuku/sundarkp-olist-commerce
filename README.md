@@ -174,7 +174,9 @@ alt="A group of logos on a white background Description automatically generated"
     
   - In Mage Step 'gcsbuckettobq', update ServiceAccount.JSON file path in service_account.Credentials.from_service_account_file. 
   
-  - Run each step in the pipeline 
+  - Run each step in the pipeline
+    
+  - While running the DBT step 'curious_ronin', first run dbt deps before running the models. (How to do it? Remove the body " --select models/* --project-dir /home/src/mage_spark/dbt/skp_olist_data_dbt --profiles-dir /home/src/mage_spark/dbt/skp_olist_data_dbt". Above, replace 'build' with 'deps'. Run it. Once it is successful, replace 'deps' with 'build'. Put in the body as  --select models/* --project-dir /home/src/mage_spark/dbt/skp_olist_data_dbt --profiles-dir /home/src/mage_spark/dbt/skp_olist_data_dbt. Run now.     
 
   - The steps as explained about, pulls data from Kaggle, ingests into bucket. Creates Tables and views in Dataset. DBT Models are run to generate new tables.
     
